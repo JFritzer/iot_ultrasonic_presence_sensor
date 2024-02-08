@@ -17,8 +17,9 @@ long duration;
 float distanceCm;
 float distanceInch;
 
-const char* ssid = "Pixel_6939";
-const char* password = "12356789";
+// Wifi login information:
+const char* ssid = "eduroast";
+const char* password = "letmeindaddy";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
