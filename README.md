@@ -28,6 +28,23 @@ iot_ultrasonic_presence_sensor/
 │   └── visualisierung/
 └── README.md                                          // Project description (this file)
 
+[iot_ultrasonic_presence_sensor/](./iot_ultrasonic_presence_sensor)
+  * [datasheets/](./iot_ultrasonic_presence_sensor/datasheets)
+    * [HC-SR04_ultraschallmodul_beschreibung_3.pdf](./iot_ultrasonic_presence_sensor/datasheets/HC-SR04_ultraschallmodul_beschreibung_3.pdf) // Datasheet of our sensor
+  * [esp32_code/](./iot_ultrasonic_presence_sensor/esp32_code)
+    * [esp32_code.ino](./iot_ultrasonic_presence_sensor/esp32_code/esp32_code.ino) // Code for ESP32 Microcontroller
+  * [housing/](./iot_ultrasonic_presence_sensor/housing)
+    * [Base.ipt](./iot_ultrasonic_presence_sensor/housing/Base.ipt)
+    * [Base.stl](./iot_ultrasonic_presence_sensor/housing/Base.stl)
+    * [Upper.ipt](./iot_ultrasonic_presence_sensor/housing/Upper.ipt)
+    * [Upper.stl](./iot_ultrasonic_presence_sensor/housing/Upper.stl)
+  * [python_script/](./iot_ultrasonic_presence_sensor/python_script)
+    * [python_script.py](./iot_ultrasonic_presence_sensor/python_script/python_script.py) // simple script to get presence status
+    * [requirements.txt](./iot_ultrasonic_presence_sensor/python_script/requirements.txt) // requirements for python script & django project
+    * [visualisierung/](./iot_ultrasonic_presence_sensor/python_script/visualisierung)
+  * [README.md](./iot_ultrasonic_presence_sensor/README.md) // Project description (this file)
+
+
 
 
 ## Hardware
