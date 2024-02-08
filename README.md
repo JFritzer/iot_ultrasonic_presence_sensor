@@ -3,12 +3,13 @@
 
 ## Description
 
-* Ultrasonic-Sensor transmitting presence to an MQTT Server.
-* Additional you can use MQTT->Telegraf->InfluxDB->Grafana for Visualization.
+* Ultrasonic-Sensor transmitting distance measurements to MQTT.
+* Additionaly you can use MQTT->Telegraf->InfluxDB->Grafana for Visualization.
+* Visualization for last 50 measurements can also be done via the django project.
 * Housing for Ultrasonic-Sensor and ESP32 for easy installation on every surface.
 
-The microcontroller send the distance to the MQTT Server and you can choose in the software, from when presence is true.
-
+The microcontroller sends distance measurements to the MQTT Server. 
+In the python code it is possible to adjust the max_req_dist & cooldown to manage presence detection.
 
 ## Hardware
 
@@ -18,12 +19,13 @@ The microcontroller send the distance to the MQTT Server and you can choose in t
 * Power supply for ESP32 and Ultrasonic-Sensor 
 
 
-## First steps
+## Making & Using the sensor
 
 * Print the housing
 * Adapt your SSID for internet connection and the adress for the MQTT server in the microcontroller files.
-* Connect the sensor to the microcontroller using pins. -> Conifigure those pins in the software
-* Copy the software to the microcontroller.
+* Connect the sensor to the microcontroller via GPIO-Pins. -> Make sure to use the pins used in the code.
+* Copy the software onto the microcontroller.
 * Place the sensor and the microcontroller in the housing.
+* Connect the microcontroller to power
 * Enjoy
 
