@@ -28,24 +28,6 @@ iot_ultrasonic_presence_sensor/
 │   └── visualisierung/                                    
 └── README.md                                               // Project description (this file)
 
-´´´bash
-iot_ultrasonic_presence_sensor/                             
-├── datasheets/                                            │
-│   └── HC-SR04_ultraschallmodul_beschreibung_3.pdf        │ Datasheet of our sensor
-├── esp32_code/                                            │
-│   └── esp32_code.ino                                     │ Code for ESP32 Microcontroller
-├── housing/                                               │
-│   ├── Base.ipt                                           │
-│   ├── Base.stl                                           │
-│   ├── Upper.ipt                                          │
-│   └── Upper.stl                                          │
-├── python_script/                                         │
-│   ├── python_script.py                                   │ simple script to get presence status
-│   ├── requirements.txt                                   │ requirements for python script & django project
-│   └── visualisierung/                                    │ small django project to display last 50 measurements
-└── README.md                                              │ Project description (this file)
-´´´
-
 
 ## Hardware
 
