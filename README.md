@@ -1,4 +1,4 @@
-# IOT_ultrasonic_presence_sensor
+# Ultrasonic presence sensor with housing to MQTT
 
 
 ## Description
@@ -23,6 +23,7 @@ The microcontroller send the distance to the MQTT Server and you can choose in t
 * Print the housing
 * Adapt your SSID for internet connection and the adress for the MQTT server in the microcontroller files.
 * Connect the sensor to the microcontroller using pins. -> Conifigure those pins in the software
-* Copy the software on the microcontroller.
+* Copy the software to the microcontroller.
+* Place the sensor and the microcontroller in the housing.
 * Enjoy
 
