@@ -12,21 +12,22 @@ The microcontroller sends distance measurements to the MQTT Server.
 In the python code it is possible to adjust the max_req_dist & cooldown to manage presence detection.
 
 # Tree Diagramm of our project
-iot_ultrasonic_presence_sensor/                             
-├── datasheets/                                           
-│   └── HC-SR04_ultraschallmodul_beschreibung_3.pdf        // Datasheet of our sensor
-├── esp32_code/                                            
-│   └── esp32_code.ino                                      // Code for ESP32 Microcontroller
-├── housing/                                               
-│   ├── Base.ipt                                           
-│   ├── Base.stl                                           
-│   ├── Upper.ipt                                          
-│   └── Upper.stl                                          
-├── python_script/                                         
-│   ├── python_script.py                                    // simple script to get presence status
-│   ├── requirements.txt                                    // requirements for python script & django project
-│   └── visualisierung/                                    
-└── README.md                                               // Project description (this file)
+iot_ultrasonic_presence_sensor/
+├── datasheets/
+│   └── HC-SR04_ultraschallmodul_beschreibung_3.pdf    // Datasheet of our sensor
+├── esp32_code/
+│   └── esp32_code.ino                                 // Code for ESP32 Microcontroller
+├── housing/
+│   ├── Base.ipt
+│   ├── Base.stl
+│   ├── Upper.ipt
+│   └── Upper.stl
+├── python_script/
+│   ├── python_script.py                               // simple script to get presence status
+│   ├── requirements.txt                               // requirements for python script & django project
+│   └── visualisierung/
+└── README.md                                          // Project description (this file)
+
 
 
 ## Hardware
