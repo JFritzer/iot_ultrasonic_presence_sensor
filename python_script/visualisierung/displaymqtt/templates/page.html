@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Data</title>
+    <!-- Include Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Distance Data</h1>
+    <div id="distance-chart">{{ plot_div|safe }}</div>
+    <p>Presence status: {% if anwesenheit %} Besetzt {% else %} Nicht besetzt {% endif %}</p>
+</body>
+</html>
+

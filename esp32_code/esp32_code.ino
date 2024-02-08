@@ -1,7 +1,7 @@
 /*********
   Rui Santos
   Complete project details at https://RandomNerdTutorials.com/esp32-hc-sr04-ultrasonic-arduino/
-  
+
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files.
   
@@ -26,7 +26,9 @@ PubSubClient client(espClient);
 long lastMsg = 0;
 char msg[50];
 int value = 0;
+int n = 0;
 const char* mqtt_server = "158.180.44.197";
+
 
 void setup() {
   Serial.begin(115200);
@@ -35,27 +37,35 @@ void setup() {
   +WiFi.mode(WIFI_STA); //Optional
   WiFi.begin(ssid, password);
   Serial.println("\nConnecting");
-
+  
   while(WiFi.status() != WL_CONNECTED){
     Serial.print(".");
     delay(100);
+    n++;
+    if (n>100) { 
+      Serial.print("Failed to connect to Wifi Network \n");
+      break;
+    }
   }
 
-  Serial.println("\nConnected to the WiFi network");
-  Serial.print("Local ESP32 IP: ");
-  Serial.println(WiFi.localIP());
+  if (WiFi.status() == WL_CONNECTED){
+    Serial.println("\nConnected to the WiFi network");
+    Serial.print("Local ESP32 IP: ");
+    Serial.println(WiFi.localIP());
+    client.setServer(mqtt_server, 1883);
+    if (client.connect("arduinoClient", "bobm", "letmein")) {
+      client.publish("homie/ESP32_Studentenlabor_1/$homie","3.0", true);
+      client.publish("homie/ESP32_Studentenlabor_1/$name", "ESP32_Studentenlabor_1", true);
+      client.publish("homie/ESP32_Studentenlabor_1/$nodes", "distance", true);
+      client.publish("homie/ESP32_Studentenlabor_1/distance/$name", "HC-SR04 Ultrasonic Sensor", true);
+      client.publish("homie/ESP32_Studentenlabor_1/distance/$property", "distance", true);
+      client.publish("homie/ESP32_Studentenlabor_1/distance/$unit", "cm", true);
+    }
+  }
+
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
 
-  client.setServer(mqtt_server, 1883);
-  if (client.connect("arduinoClient", "bobm", "letmein")) {
-    client.publish("homie/ESP32_Studentenlabor_1/$homie","3.0", true);
-    client.publish("homie/ESP32_Studentenlabor_1/$name", "ESP32_Studentenlabor_1", true);
-    client.publish("homie/ESP32_Studentenlabor_1/$nodes", "distance", true);
-    client.publish("homie/ESP32_Studentenlabor_1/distance/$name", "HC-SR04 Ultrasonic Sensor", true);
-    client.publish("homie/ESP32_Studentenlabor_1/distance/$property", "distance", true);
-    client.publish("homie/ESP32_Studentenlabor_1/distance/$unit", "cm", true);
-  }
 }
 
 void loop() {
