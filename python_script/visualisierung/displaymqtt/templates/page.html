@@ -6,11 +6,57 @@
     <title>Distance Data</title>
     <!-- Include Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        #distance-chart {
+            margin-top: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .status-besetzt {
+            color: green;
+        }
+        .status-nicht-besetzt {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Distance Data</h1>
-    <div id="distance-chart">{{ plot_div|safe }}</div>
-    <p>Presence status: {% if anwesenheit %} Besetzt {% else %} Nicht besetzt {% endif %}</p>
+    <header>
+        <h1>Distance Data</h1>
+    </header>
+    <div class="container">
+        <div id="distance-chart">{{ plot_div|safe }}</div>
+        <p>
+            Presence status: 
+            {% if anwesenheit %}
+                <span class="status-besetzt">Besetzt</span>
+            {% else %}
+                <span class="status-nicht-besetzt">Nicht besetzt</span>
+            {% endif %}
+        </p>
+    </div>
 </body>
 </html>
 
