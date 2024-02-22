@@ -33,10 +33,10 @@ In the python code it is possible to adjust the max_req_dist & cooldown to manag
 
 ## Hardware
 
-* ESP32
+* [ESP32 NodeMCU Module WLAN WiFi Development Board mit CP2102](https://www.az-delivery.de/a/downloads/-/9462e630189b3f37/666a522b484e7763)
 * Ultrasonic-Sensor HC-SR04
-* Cable
-* Power supply for ESP32 and Ultrasonic-Sensor 
+* Jumper Cables Female-Female 5 cm
+* Micro USB Power supply for ESP32 and Ultrasonic-Sensor 
 
 
 ## Making & Using the sensor
@@ -45,6 +45,8 @@ In the python code it is possible to adjust the max_req_dist & cooldown to manag
 * Adapt your SSID for internet connection and the adress for the MQTT server in the microcontroller files.
 * Connect the sensor to the microcontroller via GPIO-Pins. -> Make sure to use the pins used in the code.
 * Copy the software onto the microcontroller.
+    * Using [Ardunino IDE](https://www.arduino.cc/en/software)
+    * `Tools` > `Board` > `Boards Manager` > Install `esp32`
 * Place the sensor and the microcontroller in the housing.
 * Connect the microcontroller to power
 * Enjoy
