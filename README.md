@@ -47,6 +47,7 @@ In the python code it is possible to adjust the max_req_dist & cooldown to manag
 * Copy the software onto the microcontroller.
     * Using [Ardunino IDE](https://www.arduino.cc/en/software)
     * `Tools` > `Board` > `Boards Manager` > Install `esp32`
+    * Select right Board ()
 * Place the sensor and the microcontroller in the housing.
 * Connect the microcontroller to power
 * Enjoy
