@@ -45,9 +45,13 @@ In the python code it is possible to adjust the max_req_dist & cooldown to manag
 * Adapt your SSID for internet connection and the adress for the MQTT server in the microcontroller files.
 * Connect the sensor to the microcontroller via GPIO-Pins. -> Make sure to use the pins used in the code.
 * Copy the software onto the microcontroller.
-    * Using [Ardunino IDE](https://www.arduino.cc/en/software)
+    * Using [Ardunino IDE](https://www.arduino.cc/en/software) 
+    * Add external Boards: `File` / `Preferences`/ `Additional boards manager URLs`
+     * `http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`  
+    * https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
     * `Tools` > `Board` > `Boards Manager` > Install `esp32`
-    * Select right Board ()
+    * Select right Board (`ESP32-WROOM-DA`)
+    * Hold `BOOT` Button during upload
 * Place the sensor and the microcontroller in the housing.
 * Connect the microcontroller to power
 * Enjoy
